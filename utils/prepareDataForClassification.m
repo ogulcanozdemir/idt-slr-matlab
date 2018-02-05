@@ -11,7 +11,7 @@ for repeatIdx=1:params.num_repeat,
        data = [data; tmpData(sampleIdx).fv'];
     end    
     clear tmpData;
-    save([opts.experiment.releasePath filesep outputFile '_' num2str(repeatIdx)], 'data', 'labels', '-v7.3');
+    save([opts.experiment.releasePath filesep outputFile '_' num2str(repeatIdx) '_' params.sampling_method], 'data', 'labels', '-v7.3');
 end
 
 end

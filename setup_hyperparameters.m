@@ -1,14 +1,14 @@
 function [ params ] = setup_hyperparameters()
 
 params.num_classes = 10;
-params.num_gmm_clusters = 32;
+params.num_gmm_clusters = 64;
 params.num_repeat = 5;
 
 %% Initialize IDT parameters
 params.feature_dims = 466; % with trajectory coordinates
 
 %% sampling parameters
-params.sampling_method = 'random';
+params.sampling_method = 'hand';
 if strcmp(params.sampling_method, 'random') == 1
     params.sampling_rate = 1000;
 else

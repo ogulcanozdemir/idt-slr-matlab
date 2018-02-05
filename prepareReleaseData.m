@@ -20,6 +20,7 @@ function [ output_args ] = prepareReleaseData(fisherDataFile, opts, params, outp
 features_hog = load([fisherDataFile '_hog']);
 features_hof = load([fisherDataFile '_hof']);
 features_mbh = load([fisherDataFile '_mbh']);
+% features_shape = load([fisherDataFile '_shape']);
 for repeatIdx = 1:params.num_repeat
    data = [];
    labels = [];

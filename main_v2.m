@@ -40,8 +40,8 @@ else
    toc;
 end
 
-trainName = ['train_fisher_k' num2str(params.num_gmm_clusters) '_r' num2str(params.num_repeat)];
-testName = ['test_fisher_k' num2str(params.num_gmm_clusters) '_r' num2str(params.num_repeat)];
+trainName = ['train_fisher_k' num2str(params.num_gmm_clusters) '_r' num2str(params.num_repeat) '_' params.sampling_method];
+testName = ['test_fisher_k' num2str(params.num_gmm_clusters) '_r' num2str(params.num_repeat) '_' params.sampling_method];
 
 %% prepare fisher vectors for the fold
 for cmpIdx = 1:numel(params.cmpKeys)

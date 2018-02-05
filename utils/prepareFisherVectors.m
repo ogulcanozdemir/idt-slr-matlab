@@ -9,6 +9,9 @@ for sampleIdx = 1:size(split, 2)
     fprintf('Preparing data for Class %s and Video %s : ', classFolder, videoFolder); tic;
     
     features = load([opts.dataPath filesep classFolder filesep videoFolder filesep 'color.features']);
+    if strcmp(params.sampling_method, 'hand') == 1
+        features = generateHandSampleFromVideo(opts, params, features, classFolder, videoFolder);
+    end
     tmpFeature = features(:, cmpDim);
     
     nTraj = size(tmpFeature, 1);
@@ -24,7 +27,6 @@ for sampleIdx = 1:size(split, 2)
 end
 
 save([opts.experiment.fisherPath filesep fileName], 'modeledData', '-v7.3');
-
 
 end
 

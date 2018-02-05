@@ -24,6 +24,6 @@ for repeatIdx = 1:params.num_repeat
 end
 
 save([opts.experiment.modelPath filesep 'model_k' num2str(params.num_gmm_clusters) ...
-    '_r' num2str(params.num_repeat) '_' cmpName], 'models', '-v7.3');
+    '_r' num2str(params.num_repeat) '_' cmpName '_' params.sampling_method], 'models', '-v7.3');
 
 end
